@@ -4,6 +4,7 @@
 // un arreglo es un conjunto o coleccion de datos
 const nombre = "guillermo ";
 
+
 console.log(nombre);
 
 //siempre al contar la data de una lista inicia desde cero 
