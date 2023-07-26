@@ -39,3 +39,39 @@ const sumando2 = (numero1, numero2) => {
 };
 
 sumando2(200, 50);
+
+// ejercicios
+
+//tareitaa
+// quiero un arreglo de 10 personas
+
+const personas = [
+  "Jose",
+  "Maria",
+  "Juan",
+  "Luis",
+  "Pedro",
+  "Julia",
+  "Erick",
+  "Julian",
+  "Rosa",
+  "Mario",
+];
+
+// como compruebo cuanto elementos tiene un arreglo?
+console.log("personas1", personas.length);
+// si quiero modificar de personas el indice 6 y llamor junanito
+
+personas[6] = "jaimito";
+
+// quiero una funcion que me retorne el segundo de un arreglo
+ const tipo = [100,"pepe",true,50,"guillermo","hola mundo",'etc']
+
+//esta es la forma de ejecutar con funcion el arrays 
+ function obtenerSegundovalor(listaDeValores){
+    // estoy intentando obtener el valor con el indice 1
+  return listaDeValores[1] ===undefined
+  ?"error: posicion no encontrada" : listaDeValores[1];
+}
+
+console.log(obtenerSegundovalor(tipo))
