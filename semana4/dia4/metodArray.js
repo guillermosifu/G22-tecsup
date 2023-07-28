@@ -58,20 +58,16 @@ const numbers2 =[1,2,3,4,5]
 const nuevoArray = numbers2.filter((elemento)=> elemento >1)
 console.log(nuevoArray)
 
-
-
 //map = crea un nuevo array con los resultados de aplicar una funcion en cada elemento /itera el arrays
 
-const miArray = [1,2,3,4,5]
+const miArray = [1,2,3,4,]
 const newArray = miArray.map((elemento) =>elemento *3);
-
 console.log(newArray)
 
 //reduce= reduce todos los elemento a un unico valor aplica una funcion que acumula .
 
-const miArray2 = [1,2,3,4,5]
+const miArray2 = [1,2,3,4,10]
 const resultado = miArray2.reduce((acumulado,elemento)=> acumulado + elemento ,0)
-
 console.log(resultado)
 
 
