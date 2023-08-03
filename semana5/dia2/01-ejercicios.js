@@ -73,3 +73,24 @@ let producto = {
  * Crear una función que reciba(en un parámetro) el id de una película
  * y que imprima los géneros a los que pertenece dicha película
  */
+
+function imprimirGenerosSegunPeliculaId(peliculaId) {
+	let generosABuscar = [];
+	for (let i = 0; i < peliculas.length; i++) {
+		if (peliculas[i].id === peliculaId) {
+			generosABuscar = peliculas[i].genre_ids;
+			break;
+		}
+	}
+
+	for (let i = 0; i < generosABuscar.length; i++) {
+		for (let j = 0; j < generos.length; j++) {
+			if (generosABuscar[i] === generos[j].id) {
+				console.log(generos[j].name);
+				break;
+			}
+		}
+	}
+}
+
+imprimirGenerosSegunPeliculaId(346698);
