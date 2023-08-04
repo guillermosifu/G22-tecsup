@@ -20,8 +20,29 @@ console.log(rpta);
  * en cada objeto
  */
 
+const nuevosProductos = productos.map((p) => {
+	return {
+		precio: p.precio,
+		nombre: p.nombre
+	};
+});
+console.log('nuevosProductos', nuevosProductos);
+
 /**
  * A los productos que tienen stock < 50 unidades, descontarles el 10%
  * a los que no, dejarlos con el precio original
  * Imprimir el nuevo arreglo de todos productos con sus nuevos precios según aplique
  */
+
+const preciosConDescuentos = productos.map((p) => {
+	if (p.stock < 50) {
+		p.precio = p.precio * 0.9;
+	}
+	return p;
+});
+console.log('preciosConDescuentos', preciosConDescuentos);
+
+// const preciosConDctos = productos.map((p) => ({
+// 	...p,
+// 	precio: p.stock < 50 ? p.precio * 0.9 : p.precio
+// }));
