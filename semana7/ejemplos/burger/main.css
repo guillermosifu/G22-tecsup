@@ -1,0 +1,51 @@
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background: url(fondo.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.logo{
+    width: 120px;
+    height: 25px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 8vh;
+    background-color: #264674;
+}
+
+.ham span{
+    background-color: #f3f3f3;
+    display: block;
+    height: 3px;
+    width: 29px;
+    margin: 10px auto ;
+    border-radius: 2px;
+}
+
+.enlaces-menu{
+    display: flex;
+    padding: 0;
+}
+
+.enlaces-menu li{
+    padding: 0 40px;
+    list-style: none;
+    transition: 0.3s;
+}
+
+.enlaces-menu li a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: bold;
+}
