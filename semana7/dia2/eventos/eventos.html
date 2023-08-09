@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos</title>
+  </head>
+  <body>
+    <h1>Eventos</h1>
+
+    <!-- declramos una accion y complementa un funcion -->
+    <!--  esta el eevnto onclick -->
+    <button onclick="console.log('mi primer evento')">mi primer click</button>
+    <button onclick="alert('hola grupo')">alerta</button>
+    <!-- al darle dos click -->
+    <button ondblclick="console.log('doble click')">doble click</button>
+    <!--  onmouseover -->
+    <p onmouseover="console.log('onmouseover')">onmouseover</p>
+    <!--  eventos desde JS -->
+    <button onclick="imprimir()">Desdes js</button>
+    <button id="btn">desde js 2</button>
+    <!--  evento keyup -->
+    <input type="text" id="inputEnter" placeholder="presiona Enter" />
+    <div id="mensaje"></div>
+  
+    <h2>mas eventos</h2>
+
+    <button id="btn-prueba">imprmir algo</button>
+    <button id="btn-pregunta">Alerta pregunta</button>
+    <button id="btn-error">alerta de error</button>
+
+    <button id="btn-warning">alerta warning</button>
+    <button id="btn-danger">alerta peligro</button>
+    <button id="btn-succesfuly">alerta satisfactorio</button>
+    <button id="btn-info">alerta info</button>
+    <h2>alerta tipo notificacion</h2>
+    <button id="btn-imagen">Alerta notificacion</button>
+    <h2>alerta con imagen</h2>
+    <button id="btn-img">alerta imagen</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./eventos.js"></script>
+  </body>
+</html>
