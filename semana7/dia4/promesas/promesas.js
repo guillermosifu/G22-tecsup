@@ -19,10 +19,22 @@ const promesa = new Promise((resolve, reject) => {
 
 //como hacemos para ejecutar la promesa
 
-async function getDataFromPromise(){
-    const respuesta = await promesa;
-    console.log(respuesta)
+async function getDataFromPromise() {
+  const respuesta = await promesa;
+  console.log(respuesta);
 }
 
+getDataFromPromise();
 
-getDataFromPromise()
+//existe otra forma de leer una promesa , esta fomra existia del aasync y await
+
+// then() => enotnces  //luego
+//.then(callback)
+//
+
+promesa.then((respuesta) => {
+  //cuando acabes de ejecutar la promesa obtener el valor y guardarlo
+  console.log("then", respuesta);
+});
+
+
