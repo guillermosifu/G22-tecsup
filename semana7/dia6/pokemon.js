@@ -1,6 +1,9 @@
 //realizaremos la logica del poekdex
 
 const pokemonContainer = document.querySelector("#row-pokemones");
+
+const pokemonName = document.querySelector("#pokemon-name");
+const pokemonImage = document.querySelector("#pokemon-img");
 //haremos la funcion que trae lso datos del api
 
 //tine que usar fecth
@@ -19,19 +22,19 @@ const setpokemonsView = (results) => {
 
   results.map(async (result, index) => {
     //por cada iteracion crea la variable html
-
     const html = `
         <div class ="col-md-3 mt-3">
-        <div class ="card">
+        <div class ="card">      
         <img 
         class ="card-img-top mt-2"
         width="100"
         height="100"
         src = "${imgUrl}${index + 1}.svg"
         <div class ="card-body text-center">
-        <h6 class="text-title text-center">N.${index + 1}</h6>
+        <h6 class="text-title text-center">INDICE.${index + 1}</h6>
         <h4 class = "text-title text-center">${result.name}</h4>
-        </div>
+        <button class="btn btn-warning" onclick='obtenerDetalle("${result.url}")'  data-bs-toggle="modal" data-bs-target ="#modalPokemon">Detalle</button>
+        </div>   
         </div>
         </div>
         `;
@@ -40,5 +43,17 @@ const setpokemonsView = (results) => {
     pokemonContainer.innerHTML += html;
   });
 };
+
+
+
+// esta es otra funcion 
+ const obtenerDetalle = async (url)=>{
+    const response = await fetch(url)
+    const data = await response.json()
+    console.log("detalle",data)
+    pokemonName.innerHTML = data.name
+    pokemonImage.src= data.sprites.other.home.front_default;
+
+ }
 
 obtenerPokemones();
